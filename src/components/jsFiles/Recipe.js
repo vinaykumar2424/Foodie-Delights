@@ -30,13 +30,13 @@ const Recipe = () => {
             {recipe && <div id="recipe">
                 <h2 className='title'>{recipe.title}</h2>
                 <div className='dishTypes'>
-                    {recipe.dishTypes?.map((dishtype, index) => (
+                    {recipe?.dishTypes?.map((dishtype, index) => (
                         <span key={index}><span>&#11044;</span> {dishtype}</span>
                     ))}
                 </div>
                 <section className='sections'>
                     <div className='image-summary'>
-                        <img src={recipe.image} alt={recipe.title} />
+                        <img src={recipe?.image} alt={recipe?.title} />
                         <div>
                             <h3>Summary</h3>
                             <div dangerouslySetInnerHTML={{ __html: recipe.summary }} />
@@ -46,10 +46,10 @@ const Recipe = () => {
                         <div className='timings'>
                             <div>&#11044;</div>
                             <div>
-                                <p>Total Time: {recipe.preparationMinutes + recipe.cookingMinutes} minutes</p>
-                                <p>Preparation Time: {recipe.preparationMinutes} minutes</p>
-                                <p>Cooking Time: {recipe.cookingMinutes} minutes</p>
-                                <p>Ready In: {recipe.readyInMinutes} minutes</p>
+                                <p>Total Time: {recipe?.preparationMinutes + recipe?.cookingMinutes} minutes</p>
+                                <p>Preparation Time: {recipe?.preparationMinutes} minutes</p>
+                                <p>Cooking Time: {recipe?.cookingMinutes} minutes</p>
+                                <p>Ready In: {recipe?.readyInMinutes} minutes</p>
                             </div>
                         </div>
                         <div className='instructions'>
@@ -57,12 +57,12 @@ const Recipe = () => {
                             <div className='step-section'>
                                 <h3>Instructions</h3>
                                 <div className='steps'>
-                                    {recipe.analyzedInstructions[0].steps?.map((instruction, index) => (
+                                    {recipe.analyzedInstructions[0]?.steps?.map((instruction, index) => (
                                         <span className='step' key={index}>
                                             <span>Step:{index}</span>
                                             <div>
-                                                <span>{instruction.step}</span>
-                                                <span><span>Ingredient:</span>{instruction.ingredients[0].name}({instruction.ingredients[0].localizedName})</span>
+                                                <span>{instruction?.step}</span>
+                                                <span><span>Ingredient:</span>{instruction?.ingredients[0]?.name}({instruction?.ingredients[0]?.localizedName})</span>
                                             </div>
                                         </span>
                                     ))}
