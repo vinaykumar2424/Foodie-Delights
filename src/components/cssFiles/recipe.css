@@ -1,0 +1,197 @@
+#recipe {
+    width: calc(100vw - 4rem);
+    height: auto;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding: 0 2rem;
+}
+
+#recipe>.title {
+    width: 100%;
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+}
+
+#recipe>.dishTypes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#recipe>.dishTypes>span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+#recipe>.dishTypes>span>span {
+    font-size: 0.5rem;
+}
+
+#recipe>.sections {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#recipe>.sections>.image-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(50% - 0.5rem);
+}
+
+#recipe>.sections>.image-summary>img {
+    width: 100%;
+    height: 60dvh;
+    object-fit: cover;
+}
+
+#recipe>.sections>.image-summary>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#recipe>.sections>.image-summary>div>h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#recipe>.sections>.image-summary>div>div {
+    font-size: 1rem;
+    text-align: left;
+    width: 90%;
+}
+
+#recipe>.sections>.recipe-details {
+    width: calc(50% - 0.5rem);
+    text-align: left;
+}
+
+#recipe>.sections>.recipe-details>.timings {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    gap: 1rem;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+}
+
+#recipe>.sections>.recipe-details>.timings>div:nth-child(2) {
+    color: rgb(103, 103, 103);
+}
+
+#recipe>.sections>.recipe-details>.instructions {
+    width: calc(100% - 4rem);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    gap: 1rem;
+    padding: 0 2rem;
+    padding-bottom: 1.5rem;
+}
+
+#recipe>.sections>.recipe-details>.instructions>.step-section:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 8px;
+    width: 100%;
+}
+
+#recipe>.sections>.recipe-details>.instructions>.step-section:nth-child(2)>h3 {
+    font-size: 1rem;
+    color: rgb(103, 103, 103);
+}
+
+#recipe>.sections>.recipe-details>.instructions>.step-section:nth-child(2)>.steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.8rem;
+    width: 100%;
+
+}
+
+#recipe>.sections>.recipe-details>.instructions>.step-section:nth-child(2)>.steps>.step {
+    text-align: left;
+    width: 100%;
+
+}
+
+#recipe>.sections>.recipe-details>.instructions>.step-section:nth-child(2)>.steps>.step>span {
+    font-size: 0.8rem;
+}
+
+#recipe>.sections>.recipe-details>.instructions>.step-section:nth-child(2)>.steps>.step>div {
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    width: calc(100% - 2rem);
+    color: #000000a1;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.4rem;
+}
+
+#recipe>.sections>.recipe-details>.instructions>.step-section:nth-child(2)>.steps>.step>div>span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+#recipe>.sections>.recipe-details>.instructions>.step-section:nth-child(2)>.steps>.step>div>span>span {
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1024px) {
+    #recipe>.sections {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+    #recipe>.sections>.image-summary {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+    #recipe>.sections>.recipe-details {
+        width: 100%;
+        text-align: left;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #recipe>.title {
+        width: 100%;
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 2rem 0 1rem 0;
+    }
+}

@@ -1,0 +1,257 @@
+#home {
+    width: calc(100vw - 4rem);
+    height: 100dvh;
+    padding: 0 2rem;
+
+    background-image: url('../images/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    z-index: 1;
+}
+
+#home>.page-content {
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    padding: 3rem 0 2rem 0;
+}
+
+#home>.page-content>.logo {
+    position: relative;
+    width: 10rem;
+    height: auto;
+    object-fit: contain;
+}
+
+#home>.page-content>.search-section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#home>.page-content>.search-section>span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 8px;
+
+}
+
+#home>.page-content>.search-section>span>input {
+    width: calc(100% - 3rem);
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+#home>.page-content>.search-section>span>input::placeholder {
+    font-size: 0.8rem;
+    color: #9b9b9b;
+}
+
+#home>.page-content>.search-section>span>button {
+    position: absolute;
+    right: 0.35rem;
+    top: -0.1rem;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    color: #9b9b9b;
+    transform: rotate(110deg);
+}
+#home>.page-content>.search-results{
+    width: calc(100% - 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 25rem;
+    max-height: 30rem;
+    padding: 0 1.5rem;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+
+
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+#home>.page-content>.search-results>p{
+    width: 100%;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 400;
+}
+#home>.page-content>.search-results>.result-recipes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+#home>.page-content>.search-results>.result-recipes>.recipe{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 6rem;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#home>.page-content>.search-results>.result-recipes>.recipe:hover{
+    scale: 1.02;
+}
+#home>.page-content>.search-results>.result-recipes>.recipe>img{
+    width: 10rem;
+    height: 95%;
+    object-fit: cover;
+}
+#home>.page-content>.search-results>.result-recipes>.recipe>span{
+    height: 90%;
+    width: calc(100% - 10rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+#home>.page-content>.search-results>.result-recipes>.recipe>span>span{
+    font-size: 1.2rem;
+}
+#home>.page-content>.search-results>.result-recipes>.recipe>span>a{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+#home>.page-content>.search-results>.result-recipes>.recipe>span>a:hover::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    animation: underline 0.1s ease-in;
+}
+@keyframes underline {
+    0%{width: 0;}
+    100%{width: 100%;}
+}
+
+@media only screen and (max-width: 1024px) {
+    #home>.page-content>.search-section {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 1rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #home>.page-content>.search-section {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+    #home>.page-content>.search-section>span {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 8px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    #home>.page-content>.search-results>.result-recipes>.recipe {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: white;
+        width: 100%;
+        height: auto;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    #home>.page-content>.search-results>.result-recipes>.recipe>img {
+        width: 5rem;
+        height: 95%;
+        object-fit: cover;
+    }
+    #home>.page-content>.search-results>.result-recipes>.recipe>span {
+        height: 90%;
+        width: calc(100% - 5rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 0 1rem;
+        text-align: left;
+    }
+    #home>.page-content>.search-results>.result-recipes>.recipe>span>span {
+        font-size: 0.9rem;
+        
+    }
+    #home>.page-content>.search-results>.result-recipes>.recipe>span>a {
+        text-decoration: none;
+        color: #000;
+        position: relative;
+        font-size: 0.9rem;
+
+    }
+    #home>.page-content>.search-results>p {
+        width: 100%;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    #home>.page-content>.search-results {
+        width: calc(100% - 3rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 20rem;
+        max-height: 25rem;
+        padding: 0 1.5rem;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.75);
+        border-radius: 12px;
+        border: 1px solid rgba(209, 213, 219, 0.3);
+    }
+}
